@@ -32,14 +32,14 @@
         },
         "eraVersion": "1.0.1",
         "zksolc": {
-          "version": "1.5.7",
+          "version": "1.5.11",
           "compilerSource": "binary",
           "settings": {
             "optimizer": {
               "enabled": true,
               "mode": "3"
             },
-            "compilerPath": "C:\\Users\\Promi\\AppData\\Local\\hardhat-nodejs\\Cache\\compilers-v2\\zksolc\\zksolc-v1.5.7",
+            "compilerPath": "C:\\Users\\Promi\\AppData\\Local\\hardhat-nodejs\\Cache\\compilers-v2\\zksolc\\zksolc-v1.5.11",
             "missingLibrariesPath": "./.zksolc-libraries-cache/missingLibraryDependencies.json",
             "areLibrariesMissing": false,
             "experimental": {},

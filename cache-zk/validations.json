@@ -5,6 +5,31 @@
       "contracts/HelloAbstract.sol:HelloAbstract": {
         "src": "contracts\\HelloAbstract.sol:4",
         "version": {
+          "withMetadata": "ffd6f12a00075852e5d66eeaf1d5d9ca5eabb17acfbbd4d7ad8fef90c81c2a78",
+          "withoutMetadata": "ffd6f12a00075852e5d66eeaf1d5d9ca5eabb17acfbbd4d7ad8fef90c81c2a78",
+          "linkedWithoutMetadata": "ffd6f12a00075852e5d66eeaf1d5d9ca5eabb17acfbbd4d7ad8fef90c81c2a78"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "sayHello()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.24"
+      }
+    },
+    {
+      "contracts/HelloAbstract.sol:HelloAbstract": {
+        "src": "contracts\\HelloAbstract.sol:4",
+        "version": {
           "withMetadata": "901cacc628aa6cae73cbc13774eab9dc8a7452c58abdf5967b84a8123eef70df",
           "withoutMetadata": "901cacc628aa6cae73cbc13774eab9dc8a7452c58abdf5967b84a8123eef70df",
           "linkedWithoutMetadata": "901cacc628aa6cae73cbc13774eab9dc8a7452c58abdf5967b84a8123eef70df"
