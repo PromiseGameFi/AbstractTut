@@ -6,7 +6,7 @@ const config: HardhatUserConfig = {
     version: "1.5.7", // Ensure version is 1.5.7!
     settings: {
       // Note: This must be true to call NonceHolder & ContractDeployer system contracts
-      enableEraVMExtensions: false,
+      enableEraVMExtensions: true,
     },
   },
   defaultNetwork: "abstractTestnet",
