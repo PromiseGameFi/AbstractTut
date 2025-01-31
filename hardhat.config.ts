@@ -3,7 +3,7 @@ import "@matterlabs/hardhat-zksync";
 
 const config: HardhatUserConfig = {
   zksolc: {
-    version: "1.5.7", // Ensure version is 1.5.7!
+    version: "1.5.11", // Ensure version is 1.5.11!
     settings: {
       // Note: This must be true to call NonceHolder & ContractDeployer system contracts
       enableEraVMExtensions: true,
