@@ -62,11 +62,39 @@ contract RecursionTest {
     //Deposit function with complex pricing mechanism
     Function deposit() external payable {
         UserAccount storage userAccount = userAccounts[msg.sender];
+
+        //Initialize account if it does not exist
+        if(!userAccount.isActive){
+            userAccount.isActive = true;
+        }
+
+        //Track deposit details
+        userAccount.lastDepositAmount = msg.value;
+        userAccount.depositCount++;
+        usrAccount.depositHistory[userAccount.depositCount] = msg.value;
+
+        //Dynamic balance and price calculation
+        uint256 depositBonus = calculateDeposit(msg.value);
+        userAccount.balance += msg.value + depositBonus;
+
+        emit Deposit(msg.sender, msg.value);
     }
+
+    //Calculate deposit bonus based on complex logic
+    function calculateDepositBonus(uint256 amount) private view returns (uint256) {
+        uint256 bonusMultiplier = (amount / basePrice) * priceMultiplier;
+        return bonusMultiplier > MAX_DEPOSIT_MULTIPLIER
+            ? amount * MAX_DEPOSIT_MULTIPLIER
+            : amount * bonusMultiplier;
+    }
+
 
     //Calculate withdrawal price with dynamic price
     function calculateWithdrawalPrice(uint256 amount) private view returns (uint256) {
         uint256 baseWithdrawalFee = (amount * priceMultiplier)/100;
         return baseWithdrawalFee > amount/ 10 ? amount / 10 : baseWithdrawalFee;
     }
+
+    //Function for Owner to Update base price and multiplier
+    function updatePriceStructure(uint256 _newBasePrice, uint256 _newMultiplier) external onlyOwner
 }
