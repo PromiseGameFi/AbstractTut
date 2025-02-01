@@ -98,5 +98,6 @@ contract RecursionTest {
     //Function for Owner to Update base price and multiplier
     function updatePriceStructure(uint256 _newBasePrice, uint256 _newMultiplier) external onlyOwner {
         basePrice = _newBasePrice;
+        priceMultiplier = _newMltilier;
     }
 }
