@@ -99,5 +99,7 @@ contract RecursionTest {
     function updatePriceStructure(uint256 _newBasePrice, uint256 _newMultiplier) external onlyOwner {
         basePrice = _newBasePrice;
         priceMultiplier = _newMltilier;
+
+        emit PriceUpdate(_newBasePrice)
     }
 }
