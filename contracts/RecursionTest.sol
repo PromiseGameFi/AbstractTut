@@ -107,4 +107,18 @@ contract RecursionTest {
     receive() external payable {
         //Simple reentrancy guard or logging could be added here
     }
+
+    //Function to get user account details (for testing)
+    function getUserAccountDetails() external view returns (
+        uint256 balance,
+        uint256 lastDeposit,
+        uint256 depositCount
+    ){
+        UserAccount storage userAccounts[msg.sender];
+        return(
+            userAccount.balance,
+            userAccount.lastDepositAmount,
+            userAccount.depositCount
+        ):
+    }
 }
