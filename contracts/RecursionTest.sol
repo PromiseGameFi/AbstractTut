@@ -102,4 +102,9 @@ contract RecursionTest {
 
         emit PriceUpdate(_newBasePrice)
     }
+
+    //Fallback function to handle potential recursive calls
+    receive() external payable {
+        //Simple reentrancy guard or logging could be added here
+    }
 }
