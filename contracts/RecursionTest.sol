@@ -60,21 +60,7 @@ contract RecursionTest {
     }
 
    
-    //Calculate deposit bonus based on complex logic
-    function calculateDepositBonus(uint256 amount) private view returns (uint256) {
-        uint256 bonusMultiplier = (amount / basePrice) * priceMultiplier;
-        return bonusMultiplier > MAX_DEPOSIT_MULTIPLIER
-            ? amount * MAX_DEPOSIT_MULTIPLIER
-            : amount * bonusMultiplier;
-    }
-
-
-    //Calculate withdrawal price with dynamic price
-    function calculateWithdrawalPrice(uint256 amount) private view returns (uint256) {
-        uint256 baseWithdrawalFee = (amount * priceMultiplier)/100;
-        return baseWithdrawalFee > amount/ 10 ? amount / 10 : baseWithdrawalFee;
-    }
-
+    
     //Function for Owner to Update base price and multiplier
     function updatePriceStructure(uint256 _newBasePrice, uint256 _newMultiplier) external onlyOwner {
         basePrice = _newBasePrice;
