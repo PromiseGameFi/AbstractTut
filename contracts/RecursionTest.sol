@@ -76,7 +76,7 @@ contract RecursionTest {
         //Dynamic balance and price calculation 
         uint256 depositBonus = calculateDeposit(msg.value);
         userAccount.balance += msg.value + depositBonus;
-
+        
         emit Deposit(msg.sender, msg.value);
     }
 
