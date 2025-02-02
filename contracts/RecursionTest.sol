@@ -73,7 +73,7 @@ contract RecursionTest {
         userAccount.depositCount++;
         usrAccount.depositHistory[userAccount.depositCount] = msg.value;
 
-        //Dynamic balance and price calculation
+        //Dynamic balance and price calculation 
         uint256 depositBonus = calculateDeposit(msg.value);
         userAccount.balance += msg.value + depositBonus;
 
